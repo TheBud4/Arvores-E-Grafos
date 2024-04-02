@@ -10,6 +10,7 @@
 
 #include "Operacoes/2_incluirInfo.h"
 #include "Operacoes/3_excluirInfo.h"
+#include "Operacoes/4_buscarInfo.h"
 
 #include "Operacoes/5_emOrdem.h"
 #include "Operacoes/6_preOrdem.h"

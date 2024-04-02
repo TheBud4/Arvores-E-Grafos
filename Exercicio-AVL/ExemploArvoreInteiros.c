@@ -10,7 +10,7 @@ pDArvore constroiArvore(int dados[], int tam){
         incluirInfo(arvore, alocaInt(dados[i]),comparaInt);
         desenhaArvore(arvore, imprimeInt);
     }
-
+        
     return arvore;
 }
 
@@ -21,12 +21,12 @@ int main(){
    int ex2[] = {5, 10, 3, 12, 14};           // rotacao simples - esquerda
    int ex3[] = {5, 10, 3, 7, 8};             // rotacao dupla - esquerda/direita
    int ex4[] = {5, 10, 3, 4, 12, 9, 14, 13}; // rotacao dupla - direita/esquerda
-   int ex5[] = {5, 10, 3, 4, 12, 9, 14};     // Não precisa rotacionar
+   int ex5[] = {5, 10, 3, 4, 12, 9, 14};     // Nï¿½o precisa rotacionar
 
-   //constroiArvore(ex1, 5);
-   //constroiArvore(ex2, 5);
-   constroiArvore(ex3, 5);
-   //constroiArvore(ex4, 8);
-   //constroiArvore(ex5, 7);
+    constroiArvore(ex1, 5);
+    constroiArvore(ex2, 5);
+    constroiArvore(ex3, 5);
+    constroiArvore(ex4, 8);
+    constroiArvore(ex5, 7);
 
  }
