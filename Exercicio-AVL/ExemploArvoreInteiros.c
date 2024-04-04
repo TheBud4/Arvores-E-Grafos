@@ -24,9 +24,13 @@ int main(){
    int ex5[] = {5, 10, 3, 4, 12, 9, 14};     // N�o precisa rotacionar
 
     constroiArvore(ex1, 5);
-    constroiArvore(ex2, 5);
-    constroiArvore(ex3, 5);
-    constroiArvore(ex4, 8);
-    constroiArvore(ex5, 7);
 
+    printf("Info: %d\n",buscarInfo(ex1, alocaInt(1), comparaInt));
+
+
+
+    // constroiArvore(ex2, 5);
+    // constroiArvore(ex3, 5);
+    // constroiArvore(ex4, 8);
+    // constroiArvore(ex5, 7);
  }
