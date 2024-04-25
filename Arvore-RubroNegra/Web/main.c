@@ -8,7 +8,7 @@
 int main() {
     TNoRB *arvore = NULL;
 
-    int opc = -1, flag = 1, n, rn;
+    int opc = -1, flag = 1, n;
     
 
     do {
@@ -23,9 +23,9 @@ int main() {
                 break;
 
             case 2:
-                printf("Elemento a remover:\n");
-                scanf("%d", &rn);
-                removeNo(&arvore, rn);
+                // printf("Elemento a remover:\n");
+                // scanf("%d", &rn);
+                // removeNo(&arvore, rn);
                 break;
 
             case 3:

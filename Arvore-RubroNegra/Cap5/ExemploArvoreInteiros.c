@@ -23,15 +23,16 @@ int main(){
    int ex2[]   = {5, 10, 3, 2, 12, 11};  // caso 1 e caso 2.3
    int ex3[]   = {5, 10, 3, 2, 7, 8};    // caso 2.2
    int ex4[]   = {5, 10, 3, 2, 14, 12};  // caso 2.4
-   int ex5[]   = {8, 3, 21, 16, 27, 9, 18, 29, 10}; // vários casos juntos
+   int ex5[]   = {8, 3, 21, 16, 27, 9, 18, 29, 10}; // vï¿½rios casos juntos
 
-   //constroiArvore(ex1, 4);
+   constroiArvore(ex1, 4);
    //constroiArvore(ex1_1, 3);
+   buscarInfo(ex1,alocaInt(5),comparaInt);
    // constroiArvore(ex1_3, 3);
    //constroiArvore(ex2, 6);
    //constroiArvore(ex3, 6);
    //constroiArvore(ex4, 6);
-   constroiArvore(ex5, 9);
+   //constroiArvore(ex5, 9);
  }
 
 

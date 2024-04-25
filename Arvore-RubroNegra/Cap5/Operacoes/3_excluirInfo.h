@@ -4,11 +4,16 @@
 /* --------------------------*/
 pNohArvore excluirInfoRecursivo(pNohArvore raiz, void *info, FuncaoComparacao fc){
 
+    if(!raiz->info){
+    return 0;
+    }
+
+
 }
 
 /* ----------------------------------------------------------*/
 int excluirInfo(pDArvore arvore, void *info, FuncaoComparacao pfc){
-
+return 0;
 
 }
 

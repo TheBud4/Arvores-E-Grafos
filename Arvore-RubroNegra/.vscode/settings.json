@@ -1,0 +1,4 @@
+{
+    "c-cpp-compile-run.run-in-external-terminal": true,
+    "C_Cpp.default.cStandard": "c99"
+}

@@ -17,8 +17,8 @@ pNohArvore tio(pNohArvore raiz){
    if (raiz == NULL || raiz->pai == NULL)
      return NULL;
 
-  // o filho da esquerda do pai da raiz é a própria raiz,
-  // então retorna o filho da direita
+  // o filho da esquerda do pai da raiz ï¿½ a prï¿½pria raiz,
+  // entï¿½o retorna o filho da direita
   if (avo(raiz) != NULL && avo(raiz)->esquerda == raiz->pai)
     return avo(raiz)->direita;
 
@@ -46,9 +46,9 @@ void inverteCor(pNohArvore raiz){
 }
 
 //----------------------------------
-pNohArvore rotacaoDireita(pNohArvore raiz){ // a raiz é o filho
+pNohArvore rotacaoDireita(pNohArvore raiz){ // a raiz ï¿½ o filho
 
-    // se não tem pai e avô, não rotaciona
+    // se nï¿½o tem pai e avï¿½, nï¿½o rotaciona
     if(raiz == NULL || raiz->pai == NULL || avo(raiz) == NULL)
         return NULL;
 
@@ -72,7 +72,7 @@ pNohArvore rotacaoDireita(pNohArvore raiz){ // a raiz é o filho
 //----------------------------------
 pNohArvore rotacaoEsquerda(pNohArvore raiz){
 
-     // se não tem pai e avô, não rotaciona
+     // se nï¿½o tem pai e avï¿½, nï¿½o rotaciona
     if(raiz == NULL || raiz->pai == NULL || avo(raiz) == NULL)
         return NULL;
 
@@ -98,7 +98,7 @@ pNohArvore rotacaoEsquerda(pNohArvore raiz){
 //----------------------------------
 pNohArvore rotacaoDireitaEsquerda(pNohArvore raiz){
 
-    // se não tem pai e nem avô, não rotaciona
+    // se nï¿½o tem pai e nem avï¿½, nï¿½o rotaciona
     if(raiz == NULL || raiz->pai == NULL || avo(raiz) == NULL)
         return NULL;
 
@@ -113,7 +113,7 @@ pNohArvore rotacaoDireitaEsquerda(pNohArvore raiz){
     paiRaiz->esquerda = raiz->direita;
     raiz->direita     = paiRaiz;
 
-    // rotação simples a esquerda
+    // rotaï¿½ï¿½o simples a esquerda
     return rotacaoEsquerda(paiRaiz);
 
 
@@ -121,7 +121,7 @@ pNohArvore rotacaoDireitaEsquerda(pNohArvore raiz){
 //----------------------------------
 pNohArvore rotacaoEsquerdaDireita(pNohArvore raiz){
 
-  // se não tem pai e nem avô, não rotaciona
+  // se nï¿½o tem pai e nem avï¿½, nï¿½o rotaciona
     if(raiz == NULL || raiz->pai == NULL || avo(raiz) == NULL)
        return NULL;
 
@@ -136,7 +136,7 @@ pNohArvore rotacaoEsquerdaDireita(pNohArvore raiz){
     paiRaiz->direita = raiz->esquerda;
     raiz->esquerda   = paiRaiz;
 
-    // rotação simples a direita
+    // rotaï¿½ï¿½o simples a direita
     return rotacaoDireita(paiRaiz);
 }
 
@@ -159,7 +159,7 @@ pNohArvore incluirInfoRecursivo(pNohArvore raiz, void *info, FuncaoComparacao pf
        if (pfc(info, raiz->info) >= 0){
            filho = incluirInfoRecursivo(raiz->esquerda, info, pfc);
            if (filho->direita == raiz){
-               // houve rotação a direita, não precisa alterar o filho esquerda,
+               // houve rotaï¿½ï¿½o a direita, nï¿½o precisa alterar o filho esquerda,
                // somente ajusta a raiz para apontar para o filho
                raiz = filho;
            } else {
@@ -171,7 +171,7 @@ pNohArvore incluirInfoRecursivo(pNohArvore raiz, void *info, FuncaoComparacao pf
         else {
            filho = incluirInfoRecursivo(raiz->direita, info, pfc);
            if (filho->esquerda == raiz){
-               // houve rotação a esquerda, não precisa alterar o filho esquerda,
+               // houve rotaï¿½ï¿½o a esquerda, nï¿½o precisa alterar o filho esquerda,
                // somente ajusta a raiz para apontar para o filho
                raiz = filho;
            } else {
@@ -181,7 +181,7 @@ pNohArvore incluirInfoRecursivo(pNohArvore raiz, void *info, FuncaoComparacao pf
         }
 
         if (raiz->pai == NULL){
-            // é a raiz da árvore, tem que ser BLACK
+            // ï¿½ a raiz da ï¿½rvore, tem que ser BLACK
             raiz->cor = BLACK;
             return raiz;
         }
@@ -189,14 +189,14 @@ pNohArvore incluirInfoRecursivo(pNohArvore raiz, void *info, FuncaoComparacao pf
         // verifica a cor do pai
         if (raiz->cor == BLACK ||
             (raiz->cor == RED && filho->cor == BLACK)){
-            // não precisa fazer nada, não tem como violar alguma das regras
+            // nï¿½o precisa fazer nada, nï¿½o tem como violar alguma das regras
              return raiz;
         }
 
          // ----------------------------------------------
-        // caso 1: verifica se ambos o pai e o tio são RED,
+        // caso 1: verifica se ambos o pai e o tio sao RED,
         //         muda a cor de ambos para BLACK e a cor do
-        //         avô para RED
+        //         avï¿½ para RED
         // ----------------------------------------------
         if (raiz->cor == RED && corTio(filho) == RED){
 
@@ -211,7 +211,7 @@ pNohArvore incluirInfoRecursivo(pNohArvore raiz, void *info, FuncaoComparacao pf
 
           // ----------------------------------------------
           // Caso 2: pai e tio com cores diferentes
-                // São 4 possibilidades:
+                // Sï¿½o 4 possibilidades:
           if (raiz->cor == RED && corTio(filho) != RED){
 
               pNohArvore novaRaiz;
