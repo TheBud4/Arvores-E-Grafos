@@ -14,7 +14,7 @@ struct chaveValor {
 // onde  d <= k <= 2d
 //----------------------------
 struct nohBTree {
-  // lista com as chaves e os valores do n�
+  // lista com as chaves e os valores do nó
   pDLista listaChavesValores;
 
   struct nohBTree* primeiroFilho;  // p0

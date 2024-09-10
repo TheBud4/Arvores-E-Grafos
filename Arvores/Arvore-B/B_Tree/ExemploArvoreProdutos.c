@@ -15,7 +15,9 @@ struct Produto {
 // info1 � a struct ChaveValor e info2 � a chave
 int comparaChaveProduto(void *info1, void *info2) {
   pChaveValor p1 = (pChaveValor)info1;
+
   int *p2 = (int *)info2;
+  printf("Comparando %d com %d\n", *((int *)(p1->chave)), *p2);
   return *p2 - *((int *)(p1->chave));
 }
 
@@ -79,14 +81,24 @@ int main() {
 
   desenhaArvore(bTreeProduto, imprimeInt);
 
-  printf("\n\n --- Busca --- \n\n");
+//   printf("\n\n --- Busca --- \n\n");
 
-  struct pNohBTree *p =
-      buscarInfoBTree(bTreeProduto, alocaInt(18), comparaChaveProduto);
-  if (p == NULL) {
-    printf("Produto nao encontrado!\n");
-  } else {
-    printf("Produto encontrado:\n");
-    // imprimirLista(, imprimeInt);
-  }
+//   struct pNohBTree *p =
+//       buscarInfoBTree(bTreeProduto, alocaInt(18), comparaChaveProduto);
+//   if (p == NULL) {
+//     printf("Produto nao encontrado!\n");
+//   } else {
+//     printf("Produto encontrado:\n");
+//     // imprimirLista(, imprimeInt);
+//   }
+    printf("\n\n --- Exclusao --- \n\n");
+
+   int resultado = excluirInfoBTree(bTreeProduto, alocaInt(10), comparaChaveProduto);
+    if(resultado == 1){
+        printf("Produto excluido com sucesso!\n");
+    }else{
+        printf("Produto nao encontrado ou inexistente!\n");
+    }
+
+    desenhaArvore(bTreeProduto, imprimeInt);
 }

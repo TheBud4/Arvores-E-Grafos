@@ -2,7 +2,6 @@
 #define UTILS_H
 
 #include <stdio.h>
-#include <stdlib.h>
 
 /* ---------------------------------------- */
 /* tipo de dado INT */

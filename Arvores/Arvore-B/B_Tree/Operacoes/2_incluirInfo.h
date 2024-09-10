@@ -152,7 +152,7 @@ pNohBTree incluirInfoBTreeRecursivo(pNohBTree raiz, int ordem, void* chave, void
 /* ----------------------------------------------------------*/
 int incluirInfoBTree(pDBTree arvore, void *chave, void *valor, FuncaoComparacao pfc){
 
-     desenhaArvore(arvore, imprimeInt);
+    // desenhaArvore(arvore, imprimeInt);
      //printf("\n ---> Incluindo ....: %d [ ", *((int*)chave));
 
      pNohBTree novaRaiz = incluirInfoBTreeRecursivo(arvore->raiz, arvore->ordem, chave, valor, pfc);

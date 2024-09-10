@@ -1,7 +1,6 @@
 #ifndef EXCLUIR_INFO_H
 #define EXCLUIR_INFO_H
 
-
 int excluirInfo(pDLista pd, void *info, FuncaoComparacao pfc){
 
     pNoh atual, ant;
@@ -10,8 +9,8 @@ int excluirInfo(pDLista pd, void *info, FuncaoComparacao pfc){
     ant   = NULL;
 
     /* encontra a informacao na lista */
-    while(atual != NULL){  
-        
+    while(atual != NULL){
+
        if (pfc(atual->info, info) == 0)
           break;
 

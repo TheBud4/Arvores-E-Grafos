@@ -3,7 +3,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-
 /* ---------------------------------------- */
 /* tipo de dado INT */
 /* ---------------------------------------- */
@@ -29,6 +28,17 @@ int* alocaInt(int n){
    *pi = n;
    return pi;
 }
+
+void liberaInt(void *info){
+   int *pi = (int *) info;
+   free(pi);
+}
+
+int mapeiaInt (void* xxx){
+
+   return *((int*) xxx);
+}
+
 
 /* ---------------------------------------- */
 /* tipo de dado STRUCT Data */

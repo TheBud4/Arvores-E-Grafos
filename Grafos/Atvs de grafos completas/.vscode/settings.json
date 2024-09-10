@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "utils.h": "c",
+        "1_criargrafo.h": "c",
+        "7_buscaprofundidade.h": "c"
+    }
+}

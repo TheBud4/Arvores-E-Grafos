@@ -3,7 +3,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-
 /* ---------------------------------------- */
 /* tipo de dado INT */
 /* ---------------------------------------- */
@@ -37,7 +36,7 @@ struct Data{
    int dia, mes, ano;
 };
 /* ---------------------------------------- */
-int          comparaData  (void *info1, void *info2){
+int comparaData  (void *info1, void *info2){
     struct Data *p1 = (struct Data *) info1;
     struct Data *p2 = (struct Data *) info2;
     return ((p2->ano - p1->ano)*365) +
@@ -65,5 +64,7 @@ struct Data* alocaData    (int dia, int mes, int ano){
    pd->ano = ano;
    return pd;
 }
+/* ---------------------------------------- */
+
 
 #endif /* UTILS_H */
